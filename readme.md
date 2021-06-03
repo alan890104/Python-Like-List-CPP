@@ -21,7 +21,7 @@ You can easily create a list
 It supports int,double,string,char,char*,bool,and any other user-defined class.
 
 ## Functionality
-```cpp=
+```cpp
 <template class T>
 class list{
     public:
@@ -48,7 +48,7 @@ class list{
 ```
 
 ## Construct Example
-```cpp=
+```cpp
 	list<any> a; // an empty list
 	list<any> b(10); // a list with length 10, fill with 0
 	list<any> c(10,"char*") // a list with length 10, fill with "char*"
@@ -60,12 +60,12 @@ class list{
 ```
 
 ## Outstream Overloading Example
-```cpp=
+```cpp
 	cout<<d; //d = [1,2.5,'c',"str","alan",false,[1,2,3]]
 ```
 
 ## Index Example
-```cpp=
+```cpp
 	list<any> a{1,2,3,list<any>{'a','b','c'}};
 	cout<<a[3][0]; // = 'a'
 	
@@ -75,50 +75,50 @@ class list{
 ```
 
 ## Append Example
-```cpp=
+```cpp
 	list<any> a{1,2,3},b{4,5,6};
 	a.append(b[0]); // a = [1,2,3,4]
 	a.append(b);    // a = [1,2,3,[4,5,6]]
 ```
 
 ## Insert Example
-```cpp=
+```cpp
 	list<any> a{0,1,2,3};
 	a.insert(0,'x'); // a = ['x',0,1,2,3]
 ```
 
 ## Extend Example
-```cpp=
+```cpp
 	list<any> a{1,2,3},b{4,5,6};
 	a.extend(b); // a = [1,2,3,4,5,6]
 ```
 
 ## Comparison Example
-```cpp=
+```cpp
 	list<any> a{1,2.6,'f'},b{4,2.6,'d'};
 	cout<<(a==b); //[false,true,false]
 ```
 
 ## Reverse Example
-```cpp=
+```cpp
 	list<any> a{7,8,9,'end'};
 	a.reverse(); // a = ['end',9,8,7]
 ```
 
 ## arithmetic Example
-```cpp=
+```cpp
 	list<any> a{1,2,3,4},b{1,2,3,4};
 	cout<<(a+b); //  = [2,4,6,8]
 ```
 
 ## Where 
-```cpp=
+```cpp
 	list<any> a{1,2,3,4},idx{false,false,true,true};
 	a.where(idx,"nice"); // a = [1,2,"nice","nice"]
 ```
 
 ## Example
-```cpp=
+```cpp
 #include <iostream>
 #include <vector>
 #include "list.hpp"
