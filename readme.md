@@ -11,7 +11,7 @@ python like list in C++
 ![chat](https://img.shields.io/discord/:serverId.svg)
 
 # Github Link
-![Python-Like-List-CPP](https://github.com/alan890104/Python-Like-List-CPP)
+https://github.com/alan890104/Python-Like-List-CPP
 
 ## Table of Contents
 [TOC]
