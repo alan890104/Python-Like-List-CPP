@@ -10,14 +10,15 @@ python like list in C++
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
 ![chat](https://img.shields.io/discord/:serverId.svg)
 
-## Table of Contents
+# Github Link
+![Python-Like-List-CPP](https://github.com/alan890104/Python-Like-List-CPP)
 
+## Table of Contents
 [TOC]
 
 ## Description
 You can easily create a list 
-It supplies int,double,string,char,char*,bool,etc.
-and user-defined class also work.
+It supports int,double,string,char,char*,bool,and any other user-defined class.
 
 ## Functionality
 ```cpp=
@@ -45,6 +46,77 @@ class list{
     private:
         std::vector<T> a;
 ```
+
+## Construct Example
+```cpp=
+	list<any> a; // an empty list
+	list<any> b(10); // a list with length 10, fill with 0
+	list<any> c(10,"char*") // a list with length 10, fill with "char*"
+	
+	std::string s="alan"
+	list<any> d{1,2.5,'c',"str",s,false,list<any>(1,2,3)} // initialize with {} 
+	
+	list<any> e(d) // e is a deep copy from d
+```
+
+## Outstream Overloading Example
+```cpp=
+	cout<<d; //d = [1,2.5,'c',"str","alan",false,[1,2,3]]
+```
+
+## Index Example
+```cpp=
+	list<any> a{1,2,3,list<any>{'a','b','c'}};
+	cout<<a[3][0]; // = 'a'
+	
+	cout<<a[-1]; // = ['a','b','c']
+	
+	cout<<a[list<any>{false,true,false,true}]; // = [2,['a','b','c']]
+```
+
+## Append Example
+```cpp=
+	list<any> a{1,2,3},b{4,5,6};
+	a.append(b[0]); // a = [1,2,3,4]
+	a.append(b);    // a = [1,2,3,[4,5,6]]
+```
+
+## Insert Example
+```cpp=
+	list<any> a{0,1,2,3};
+	a.insert(0,'x'); // a = ['x',0,1,2,3]
+```
+
+## Extend Example
+```cpp=
+	list<any> a{1,2,3},b{4,5,6};
+	a.extend(b); // a = [1,2,3,4,5,6]
+```
+
+## Comparison Example
+```cpp=
+	list<any> a{1,2.6,'f'},b{4,2.6,'d'};
+	cout<<(a==b); //[false,true,false]
+```
+
+## Reverse Example
+```cpp=
+	list<any> a{7,8,9,'end'};
+	a.reverse(); // a = ['end',9,8,7]
+```
+
+## arithmetic Example
+```cpp=
+	list<any> a{1,2,3,4},b{1,2,3,4};
+	cout<<(a+b); //  = [2,4,6,8]
+```
+
+## Where 
+```cpp=
+	list<any> a{1,2,3,4},idx{false,false,true,true};
+	a.where(idx,"nice"); // a = [1,2,"nice","nice"]
+```
+
 ## Example
 ```cpp=
 #include <iostream>
